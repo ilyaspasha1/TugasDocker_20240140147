@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h2>MY Website 20210140019</h2>
+<p>Selamat datang di aplikasi!</p>
+<a href="/form">+ Input Data Mahasiswa</a>
+<table border="1">
+    <tr><th>Nama</th><th>NIM</th><th>Jenis Kelamin</th></tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.nama}"></td>
+        <td th:text="${user.nim}"></td>
+        <td th:text="${user.jenisKelamin}"></td>
+    </tr>
+</table>
+<br><a href="/">Logout</a>
+</body>
+</html>
